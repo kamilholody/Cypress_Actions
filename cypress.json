@@ -1,6 +1,6 @@
 {
     "reporter": "cypress-mochawesome-reporter",
-    "video": "fasle",
+    "video": false,
     "defaultCommandTimeout": 10000,
     "watchForFileChanges": false
 }
