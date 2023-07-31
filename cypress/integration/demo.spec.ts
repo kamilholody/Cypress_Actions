@@ -1,6 +1,6 @@
 describe('Demo Test', () => {
-    it('should visit a website', () => {
+    it('should login into an application', () => {
         cy.visitLoginpage()
-        cy.visitHomepage()
+        cy.login("username", "password")
     })
 })
