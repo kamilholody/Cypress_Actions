@@ -1,7 +1,10 @@
 describe('Feedback Test', () => {
     it('should submit feedback form', () => {
         cy.visitFeedbackpage()
-        cy.submitFeedback('Peter', 'test@gmail.com', 'My subject', 'This is my awesome message')
+    
+        cy.fixture("feedbackData").then(({name, email, subject, message}) => {
+            cy.submitFeedback(name, email, subject, message)
+        })
         cy.asertionFeedback()
     })
 })
